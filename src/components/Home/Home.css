@@ -1,0 +1,25 @@
+/* ===== App Store Home Page ===== */
+.home-container {
+  padding: 3rem 2rem;
+  min-height: 100vh;
+}
+
+.store-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 2.5rem;
+  color: #111;
+  letter-spacing: -0.5px;
+}
+
+/* ===== Product Grid ===== */
+.apps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 0.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  list-style: none;
+}

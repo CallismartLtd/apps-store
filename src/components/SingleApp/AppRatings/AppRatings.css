@@ -1,0 +1,112 @@
+/* ===== Ratings & Reviews Component ===== */
+.app-ratings {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+  margin-top: 20px;
+}
+
+.app-ratings h3 {
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Rating summary */
+.rating-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.average-rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.average-rating strong {
+  font-size: 1.1rem;
+  color: #222;
+}
+
+.average-rating span {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Stars */
+.stars {
+  font-size: 1.2rem;
+  color: #ddd;
+}
+
+.star.filled {
+  color: #f5a623; /* gold */
+}
+
+.active-installs {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* Ratings breakdown */
+.ratings-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.rating-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.star-label {
+  width: 30px;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.bar {
+  flex: 1;
+  background: #eee;
+  border-radius: 4px;
+  height: 8px;
+  overflow: hidden;
+}
+
+.fill {
+  background: #f5a623;
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.count {
+  width: 40px;
+  text-align: right;
+  font-size: 0.85rem;
+  color: #333;
+}
+
+/* Support link */
+.support-link {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.support-link a {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #0073e6;
+  text-decoration: none;
+}
+
+.support-link a:hover {
+  text-decoration: underline;
+}

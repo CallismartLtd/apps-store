@@ -1,0 +1,121 @@
+/* ===== General Reset / Base Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f1f1f1;
+  color: #222;
+  line-height: 1.6;
+}
+
+body {
+  background: #f9fafc;
+  
+}
+
+/* ===== Global Container ===== */
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+}
+
+/* ===== Headings ===== */
+h1, h2, h3, h4, h5 {
+  font-weight: 600;
+  color: #111;
+}
+
+/* ===== Links ===== */
+a {
+  text-decoration: none;
+  color: #0077cc;
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  color: #005fa3;
+}
+
+/* ===== Buttons ===== */
+button {
+  cursor: pointer;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #0077cc;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* ===== Utility Classes ===== */
+.text-center {
+  text-align: center;
+}
+
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 1.5rem; }
+
+.p-1 { padding: 0.5rem; }
+.p-2 { padding: 1rem; }
+.p-3 { padding: 1.5rem; }
+
+/* === Price Wrapper === */
+.price-wrapper {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #111827; /* neutral gray-900 */
+}
+
+/* Regular price (crossed out) */
+.price-wrapper .regular-price {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #6b7280; /* neutral gray-500 */
+  text-decoration: line-through;
+}
+
+/* Sale price */
+.price-wrapper .sale-price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #e02424; /* red-600 */
+}
+
+/* Normal (non-sale) price */
+.price-wrapper .normal-price {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827; /* neutral gray-900 */
+}
+
+/* Billing cycle (/month, /year) */
+.price-wrapper .billing-cycle {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #4b5563; /* neutral gray-600 */
+}

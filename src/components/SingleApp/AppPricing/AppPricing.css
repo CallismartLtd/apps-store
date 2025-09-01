@@ -1,0 +1,128 @@
+/* ===== App Pricing Component ===== */
+.app-pricing {
+  position: relative;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+  width: 50%;
+  max-width: 300px;
+}
+
+.app-pricing h3 {
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.tier-selection-container {
+  width: 100%;
+  margin: 10px auto;
+}
+
+.tier-switcher {
+  height: 40px;
+  width: 100%;
+  border: solid 1px #dcdcde;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.tier-switcher:focus {
+  outline: none;
+  box-shadow: 0 6px 14px rgba(0 0 0 / 38%);
+  border-color: #0073e6;
+}
+
+.pricing-tab {
+  background: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pricing-tab:hover {
+  background: #eaeaea;
+}
+
+.pricing-tab.active {
+  background: #0073e6;
+  border-color: #0073e6;
+  color: #fff;
+}
+
+/* Active Card */
+.pricing-card {
+  background: #fafafa;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  padding: 18px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.tier-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.tier-price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: #111;
+}
+
+.billing-cycle {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #666;
+}
+
+.tier-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px;
+  text-align: left;
+}
+
+.tier-features li {
+  font-size: 0.9rem;
+  color: #444;
+  margin: 6px 0;
+  position: relative;
+  padding-left: 18px;
+}
+
+.tier-features li::before {
+  content: "✔";
+  color: #28a745;
+  position: absolute;
+  left: 0;
+  font-size: 0.9rem;
+}
+
+.buy-button {
+  display: inline-block;
+  background: #0073e6;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.buy-button:hover {
+  background: #005bb5;
+  color: #fff;
+
+}

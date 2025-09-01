@@ -1,0 +1,36 @@
+.store-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  margin-bottom: 20px;
+  z-index: 100;
+}
+
+.header-left .logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #007aff; /* primary blue */
+  text-decoration: none;
+}
+
+.header-nav .nav-link {
+  margin-right: 1.5rem;
+  font-weight: 500;
+  color: #111;
+  text-decoration: none;
+}
+
+.header-nav .nav-link:hover {
+  color: #007aff;
+}
+
+.header-right .cart-icon {
+  font-weight: 600;
+  color: #FFFF;
+  text-decoration: none;
+}

@@ -1,0 +1,39 @@
+/* ===== Single App Page ===== */
+.single-app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans,
+    Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  color: #333;
+}
+
+.single-app_header-section {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.single-app_header-app-data {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.single-app_short-description {
+  width: 100%;
+  font-size: 1.25rem;
+  padding: 24px 0;
+}
