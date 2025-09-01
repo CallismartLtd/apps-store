@@ -50,7 +50,7 @@ export default function AppHeader({
             </a>
           )}
           {packageUrl && (
-            <a href={packageUrl} download={true}>
+            <a href={packageUrl}>
               Download
             </a>
           )}
