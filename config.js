@@ -2,6 +2,7 @@
  * Application configuration file
  */
 export const storeConfig = {
+    appName: 'Callismart Official App Store',
     apiUrl: new URL( import.meta.env.VITE_API_URL ),
     buildEndpoint(path) {
         const url = new URL(this.apiUrl);
