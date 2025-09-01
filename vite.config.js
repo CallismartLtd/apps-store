@@ -1,7 +1,14 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  base: './', // important so assets resolve relative to theme
+  build: {
+    outDir: 'dist',
+    manifest: true,
+    rollupOptions: {
+      input: '/src/main.jsx', // your app entry
+    },
+  },
 })
