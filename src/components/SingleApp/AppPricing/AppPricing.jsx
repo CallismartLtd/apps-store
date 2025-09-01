@@ -57,9 +57,9 @@ export default function AppPricing({ monetization }) {
         )}
 
         <a
-          href={activeTier.product.permalink}
+          href={activeTier.product.checkout_url}
           target="_blank"
-          rel="noopener noreferrer"
+          rel="n"
           className="buy-button"
         >
           Purchase
