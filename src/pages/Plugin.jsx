@@ -19,7 +19,7 @@ export default function Plugin() {
 
     const plugin = data || null;
 
-    if (loading) return <Loading message="Loading..." />;
+    if (loading) return <Loading variant="single" />;
     if (error) return <AppError message={error} onRetry={refetch} />;
     if (!plugin) return <AppError message="Plugin not found" />;
 
