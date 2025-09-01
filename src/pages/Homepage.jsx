@@ -12,7 +12,7 @@ export default function Homepage() {
   const { data, loading, error, refetch } = useFetch("repository");
   const apps = data?.apps || [];
   
-  if (loading) return <Loading message="Loading..." />;
+  if (loading) return <Loading variant="grid" />;
   if (error) return <AppError message={error} onRetry={refetch} />;
   if (!apps.length) return <AppError message="No applications found" />;
 
