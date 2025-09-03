@@ -3,6 +3,9 @@ import Loading from "../components/Loading/Loading";
 import { Error as AppError } from "../components/Error/Error";
 import { useFetch } from "../hooks/useFetch";
 import SingleApp from "../components/SingleApp/SingleApp";
+import { storeConfig } from "../../config";
+import { useDocumentMeta } from "../hooks/useDocumentMeta";
+import { reportError } from "../utils/api";
 
 /**
  * The single plugin information page.
@@ -18,10 +21,18 @@ export default function Plugin() {
     });
 
     const plugin = data || null;
+    
+    useDocumentMeta({
+        title: `${plugin?.name ?? 'Please wait...' } – ${storeConfig.appName}`,
+        description: plugin?.short_description ?? 'Please wait',
+        image: plugin?.banners?.high,
+        type: "article",
+    });
+
 
     if (loading) return <Loading variant="single" />;
-    if (error) return <AppError message={error} onRetry={refetch} />;
-    if (!plugin) return <AppError message="Plugin not found" />;
+    if (error) return <AppError error={error} onRetry={refetch} onReport={reportError} />;
+    if (!plugin) return <AppError error="Plugin not found" onReport={reportError} />;
 
     return <SingleApp app={plugin} />;
 }

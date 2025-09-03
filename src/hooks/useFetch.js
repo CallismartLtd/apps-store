@@ -34,7 +34,7 @@ export function useFetch( request, useCache = true ) {
             setData( result );
         } catch ( err ) {
             if ( err.name !== "AbortError" ) {
-                setError( err.message || "An error occurred" );
+                setError( err || new Error( "An error occurred" ) );
             }
         } finally {
             if ( signal?.aborted || controllerRef.current?.signal !== signal ) return;

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { SearchInput } from "../SearchInput/SearchInput";
 import "./Header.css";
 
 export default function Header() {
@@ -10,9 +11,7 @@ export default function Header() {
         </Link>
       </div>
 
-      <nav className="header-nav">
-        <Link to="/" className="nav-link">Home</Link>
-      </nav>
+      <SearchInput/>
 
     </header>
   );

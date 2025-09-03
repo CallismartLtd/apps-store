@@ -1,23 +1,133 @@
-.error {
+.fullpage-error {
+  width: 100%;
+  max-width: 1000px;
+  background-color: #fefefe;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 2rem;
-  color: #d93025; /* error red */
-  background: #ffe5e5;
+  padding: 10px;
+  z-index: 9999;
   border-radius: 8px;
-  margin: 1rem 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+  margin: 30px auto;
 }
 
-.retry-btn {
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  background: #0073e6; /* primary color */
-  color: #fff;
+.error-illustration {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  margin-bottom: 1.5rem;
+}
+
+.spanner-icon {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 80px;
+  /* Placeholder style: can be replaced with animated SVG */
+  background: url('/spanner.svg') center center no-repeat;
+  background-size: contain;
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: translateX(-50%) rotate(0deg); }
+  to { transform: translateX(-50%) rotate(360deg); }
+}
+
+.error-content h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #b91c1c;
+}
+
+.error-content .message {
+  font-size: 1rem;
+  margin-bottom: 1.25rem;
+  white-space: pre-line;
+  color: #374151;
+}
+
+.actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.btn {
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
   border: none;
-  border-radius: 6px;
   cursor: pointer;
-  transition: background 0.2s;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
 }
 
-.retry-btn:hover {
-  background: #005bb5;
+.btn.retry {
+  background-color: #ef4444;
+  color: #fff;
+}
+
+.btn.retry:hover {
+  background-color: #dc2626;
+}
+
+.btn.report {
+  background-color: #2563eb;
+  color: #fff;
+}
+
+.btn.report:hover {
+  background-color: #1d4ed8;
+}
+
+/* Optional: type variants for background or text colors */
+.fullpage-error.warning { background-color: #fffbeb; }
+.fullpage-error.info { background-color: #eff6ff; }
+
+.spanner-svg {
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
+/* Error info section */
+.network-info,
+.error-message-section {
+background-color: #000000;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem auto;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  color: #4ffd08;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Optional heading for the section */
+.network-info h2,
+.error-message-section h2 {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  color: #DCDCDE;
+}
+
+/* Optional message paragraph */
+.network-info p,
+.error-message-section p {
+  margin: 0;
 }

@@ -1,5 +1,5 @@
 // src/components/Badges/Badges.jsx
-
+import './Styles.css'
 /**
  * Ribbon-style badge for "SALE"
  */
@@ -132,4 +132,38 @@ export function PremiumBadge({
       </text>
     </svg>
   );
+}
+
+
+/**
+ * Reusable inline SVG Icon component
+ *
+ * @param {string} name - Icon name ("search", "error", "close", etc.)
+ * @param {string|number} size - Icon size (default 24)
+ * @param {string} className - Extra CSS classes
+ */
+export default function Icon({ name, size = 24, className = "" }) {
+  const icons = {
+    search: (
+      <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <circle cx="11" cy="11" r="8" strokeWidth="2" />
+        <line x1="21" y1="21" x2="16.65" y2="16.65" strokeWidth="2" />
+      </svg>
+    ),
+    error: (
+      <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <circle cx="12" cy="12" r="10" strokeWidth="2" />
+        <line x1="12" y1="8" x2="12" y2="12" strokeWidth="2" />
+        <circle cx="12" cy="16" r="1" />
+      </svg>
+    ),
+    close: (
+      <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <line x1="6" y1="6" x2="18" y2="18" strokeWidth="2" />
+        <line x1="6" y1="18" x2="18" y2="6" strokeWidth="2" />
+      </svg>
+    ),
+  };
+
+  return <span className={`app-icon ${className}`}>{icons[name] || null}</span>;
 }

@@ -1,0 +1,37 @@
+.search-notfound {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #374151; /* gray-700 */
+}
+
+.search-notfound_icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.search-notfound h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.search-notfound p {
+  margin: 0.25rem 0;
+  color: #6b7280;
+}
+
+.search-notfound_btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #2563eb; /* blue-600 */
+  color: #fff;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.search-notfound_btn:hover {
+  background-color: #1d4ed8;
+  color: yellow;
+}

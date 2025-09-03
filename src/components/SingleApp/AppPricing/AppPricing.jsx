@@ -16,6 +16,13 @@ export default function AppPricing({ monetization }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const activeTier = monetization.tiers[activeIndex];
 
+  const parseCheckoutUrl = ( tier ) => {
+    let url = new URL( tier.product.checkout_url );
+    url.searchParams.set( 'name', tier.name );
+
+    return url.href;
+  }
+
   return (
     <div className="app-pricing">
       <h3>Pricing & Licenses</h3>
@@ -57,7 +64,7 @@ export default function AppPricing({ monetization }) {
         )}
 
         <a
-          href={activeTier.product.checkout_url}
+          href={parseCheckoutUrl(activeTier)}
           target="_blank"
           rel="n"
           className="buy-button"

@@ -16,7 +16,8 @@ export async function fetchFromApi( path, options = {}, useCache = true ) {
 
   if ( params ) {
     Object.entries( params ).forEach( ( [ key, value ] ) => {
-      url.searchParams.append( key, value );
+      if ( value ) url.searchParams.append( key, value );
+      
     } );
   }
 
@@ -47,10 +48,30 @@ export async function fetchFromApi( path, options = {}, useCache = true ) {
  * @param {string} [path] - Endpoint path. If omitted, clears all cache.
  */
 export function clearCache(path) {
-    if (path) {
-        const url = storeConfig.buildEndpoint(path).href;
-        cache.delete(url);
-    } else {
-        cache.clear();
-    }
+  if (path) {
+      const url = storeConfig.buildEndpoint(path).href;
+      cache.delete(url);
+  } else {
+      cache.clear();
+  }
+}
+
+/**
+ * Report an error to our support portal with UTM params
+ */
+export function reportError() {
+  if (!storeConfig?.supportUrl?.href) return;
+
+  const url = new URL(storeConfig.supportUrl.href);
+
+  // Append UTM parameters
+  url.searchParams.set("utm_source", "app store");
+  url.searchParams.set("utm_medium", "error_report");
+  url.searchParams.set("utm_campaign", "user_error_tracking");
+
+  // Optional: Append a timestamp to identify the report uniquely
+  url.searchParams.set("ts", Date.now());
+
+  // Redirect user
+  window.location.href = url.toString();
 }
