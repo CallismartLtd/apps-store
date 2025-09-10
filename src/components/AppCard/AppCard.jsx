@@ -15,8 +15,8 @@ export default function AppCard({ app }) {
             <Link to={`/${app.type}/${encodeURIComponent(app.slug)}`} className="app-link">
                 <div className="app-card_header">
                     <img
-                        src={app.banners?.low || "/placeholder.png"}
-                        alt={app.name}
+                        src={app.icons?.high || app.icons?.low || "/software-placeholder.svg"}
+                        alt={app.name ? `${app.name} icon` : "App icon"}
                         loading="lazy"
                         className="app-card_header-image"
                     />
