@@ -17,17 +17,18 @@ export default function AppPricing({ monetization }) {
   const activeTier = monetization.tiers[activeIndex];
 
   const parseCheckoutUrl = ( tier ) => {
-    let url = new URL( tier.product.checkout_url );
-    url.searchParams.set( 'name', tier.name );
-
-    return url.href;
+    try {
+      let url = new URL( tier.product.checkout_url );
+      url.searchParams.set( 'name', tier.name );
+      return url.href;
+    } catch (error) {}
+    
   }
 
   return (
     <div className="app-pricing">
       <h3>Pricing & Licenses</h3>
 
-      {/* Switcher Tabs */}
       <div className="tier-selection-container">
         <select
           className="tier-switcher"
@@ -48,7 +49,7 @@ export default function AppPricing({ monetization }) {
         <h4 className="tier-name">{activeTier.name}</h4>
 
         <p className="tier-price">
-          {renderPriceHtml(
+          {activeTier?.product && renderPriceHtml(
             activeTier.product,
             activeTier.product.currency,
             activeTier.billing_cycle
@@ -66,13 +67,12 @@ export default function AppPricing({ monetization }) {
         <a
           href={parseCheckoutUrl(activeTier)}
           target="_blank"
-          rel="n"
           className="buy-button"
         >
           Purchase
         </a>
 
-        {activeTier.product.pricing.is_on_sale && <SaleBadge />}
+        {activeTier.product?.pricing?.is_on_sale && <SaleBadge />}
       </div>
     </div>
   );
