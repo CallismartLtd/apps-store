@@ -16,7 +16,7 @@ export default function SingleApp({ app }) {
                     version={app.version}
                     author={app.author}
                     authorProfile={app.author_profile}
-                    image={app.banners?.high}
+                    image={app.icons?.high ?? icons.low}
                     homepage={app.homepage}
                     packageUrl={app.package}
                 />
