@@ -44,7 +44,7 @@ export default function Search() {
   const apps = data?.apps || [];
   const pagination = data?.pagination;
 
-  if (loading) return <Loading variant="grid" />;
+  if (loading) return <Loading variant="grid" showTitle={false} />;
   if (error) return <AppError error={error} onRetry={refetch} onReport={reportError} />;
   if (!apps.length) return <SearchNotFound term={searchTerm} />;
 
