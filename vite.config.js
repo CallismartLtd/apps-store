@@ -9,6 +9,8 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     manifest: true,
-    rollupOptions: {},
+    rollupOptions: {
+      
+    },
   },
 })
