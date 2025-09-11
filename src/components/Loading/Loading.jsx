@@ -73,6 +73,7 @@ export default function Loading( { count = 20, variant = "grid", showTitle = tru
           <button className="app-section_nav-button button active">Description</button>
           <button className="app-section_nav-button button">Installation</button>
           <button className="app-section_nav-button button">Changelog</button>
+          <button className="app-section_nav-button button">Screenshots</button>
         </div>
         <div className="skeleton skeleton-section app-section" />
 
