@@ -16,7 +16,7 @@ export default function SingleApp({ app }) {
                     version={app.version}
                     author={app.author}
                     authorProfile={app.author_profile}
-                    image={ app.icons['2x'] ?? icons['1x'] }
+                    image={ app.icons['2x'] || app.icons['1x'] || "/software-placeholder.svg" }
                     homepage={app.homepage}
                     packageUrl={app.package}
                 />
