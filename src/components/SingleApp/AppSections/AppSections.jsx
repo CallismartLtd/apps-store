@@ -17,11 +17,29 @@ export default function AppSections({ sections }) {
   const sectionKeys = Object.keys(sections);
   const [activeSection, setActiveSection] = useState(sectionKeys[0]);
 
-  const renderSection = (title, html) => {
+  const renderSection = (key, title, html) => {
     if (!html) return null;
-    const cleanHtml = DOMPurify.sanitize(html);
+
+    // Parse raw HTML string into a DOM tree
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(html, "text/html");
+
+    // If it's the screenshots section, add a selector to <ol>
+    if (key === "screenshots") {
+      const ol = doc.querySelector("ol");
+      if (ol) {
+        ol.classList.add("screenshot-list");
+      }
+    }
+
+    // Serialize modified DOM back to string
+    const modifiedHtml = doc.body.innerHTML;
+
+    // Sanitize before rendering
+    const cleanHtml = DOMPurify.sanitize(modifiedHtml);
+
     return (
-      <div className="app-section">
+      <div className={`app-section app-section-${key}`}>
         <h2 className="app-section_title">{title}</h2>
         <div
           className="app-section_content"
@@ -30,6 +48,7 @@ export default function AppSections({ sections }) {
       </div>
     );
   };
+
 
   return (
     <div className="app-sections">
@@ -49,6 +68,7 @@ export default function AppSections({ sections }) {
 
       {/* Active Section */}
       {renderSection(
+        activeSection,
         StringUtils.ucwords( activeSection ),
         sections[activeSection]
       )}
