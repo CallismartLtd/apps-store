@@ -8,13 +8,4 @@
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
   Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
-  Content-Security-Policy: default-src 'self'; 
-    script-src 'self' 'unsafe-inline' https://apps.callismart.com.ng; 
-    style-src 'self' 'unsafe-inline' https://apps.callismart.com.ng; 
-    img-src 'self' data: https://apps.callismart.com.ng https://apiv1.callismart.com.ng; 
-    connect-src 'self' https://apiv1.callismart.com.ng; 
-    font-src 'self' data:; 
-    object-src 'none'; 
-    frame-ancestors 'none'; 
-    base-uri 'self'; 
-    form-action 'self'
+
