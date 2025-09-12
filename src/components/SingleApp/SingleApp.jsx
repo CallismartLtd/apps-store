@@ -18,7 +18,7 @@ export default function SingleApp({ app }) {
                     authorProfile={app.author_profile}
                     image={ app.icons['2x'] || app.icons['1x'] || "/software-placeholder.svg" }
                     homepage={app.homepage}
-                    packageUrl={app.package}
+                    packageUrl={!app.is_monetized ? app.package : ''}
                 />
 
                 <AppMeta
