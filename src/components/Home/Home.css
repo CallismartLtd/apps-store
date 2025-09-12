@@ -23,3 +23,9 @@
   margin: 0 auto;
   list-style: none;
 }
+
+@media (min-width: 280px) and (max-width: 768px) {
+  .home-container {
+    padding: 10px;
+  }
+}

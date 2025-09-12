@@ -1,11 +1,12 @@
 /* ===== App Pricing Component ===== */
 .app-pricing {
+  flex: 1 0;
   position: relative;
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
   width: 50%;
-  max-width: 300px;
+  max-width: 100%;
 }
 
 .app-pricing h3 {

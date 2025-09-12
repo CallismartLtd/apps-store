@@ -37,3 +37,9 @@
   font-size: 1.25rem;
   padding: 24px 0;
 }
+
+@media (min-width: 280px) and (max-width: 768px) {
+  .single-app {
+    padding: 10px;
+  }
+}
