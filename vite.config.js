@@ -32,7 +32,7 @@ export default defineConfig({
     manifest: isWordPress, // Only generate manifest for WP build
 
     rollupOptions: {
-      input: isWordPress ? 'src/main.jsx' : 'public/index.html',
+      input: isWordPress ? 'src/main.jsx' : '',
     },
   },
 })
