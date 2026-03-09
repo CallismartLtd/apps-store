@@ -46,7 +46,7 @@ export default function AppRatings({
         </div>
 
         <div className="active-installs">
-          <strong>{activeInstalls.toLocaleString()}</strong> Active Installs
+          <strong>{activeInstalls ? activeInstalls?.toLocaleString() : "0"}</strong> Active Installs
         </div>
       </div>
 

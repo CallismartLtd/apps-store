@@ -52,7 +52,7 @@ export default function AppMeta({
         </li>
         <li>
           <strong>Active Installs:</strong>{" "}
-          {activeInstalls ? activeInstalls.toLocaleString() : "0"}
+          {activeInstalls ? activeInstalls?.toLocaleString() : "0"}
         </li>
         {supportUrl && (
           <li>

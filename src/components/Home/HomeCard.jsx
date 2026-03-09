@@ -12,7 +12,6 @@ import "./Home.css";
 function HomeCard( {apps, title, pagination} ) {
     return (
         <div className="home-container">
-            <h1 className="store-title">{ title || storeConfig.appName}</h1>
             <ul className="apps-grid">
                 {apps.map( ( app ) => (
                 <AppCard key={app.slug} app={app} />

@@ -71,6 +71,15 @@
   opacity: 0.9;
 }
 
+.app-card_app-author span{
+  display: inline-flex;
+}
+
+.app-card_app-author span a {
+  width: 100%;
+  height: 100%;
+}
+
 /* App description */
 .app-description {
   color: #444;

@@ -5,6 +5,7 @@ import Search from "./pages/Search";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer"; // ✅ import
 import "./App.css";
+import Theme from "./pages/Theme";
 
 function App() {
   return (
@@ -13,9 +14,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/plugin/:slug" element={<Plugin />} />
+        <Route path="/theme/:slug" element={<Theme />} />
         <Route path="/search/" element={<Search />} />
       </Routes>
-      <Footer /> {/* ✅ added */}
+      <Footer />
     </Router>
   );
 }
